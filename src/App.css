@@ -1,38 +1,93 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans",
+  sans-serif;
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+}
+
+nav,
+footer {
+  padding: 1% 0;
+  background-color: #aaa;
+}
+
+
+footer {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.SideBar {
+  background-color: #aaa
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  
+}
+button {
+  margin-left: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main{
   display: flex;
   flex-direction: column;
+  width:100%;
+}
+
+header {
+  padding: 45px 15px;
+}
+
+section {
+  min-height: 200px;
+  padding: 30px 15px;
+  background-color: #bbb;
+}
+
+section:nth-child(even) {
+  background-color: #ddd;
+}
+
+p {
+  margin: 0 auto;
+}
+
+p + p {
+  margin-top: 15px;
+}
+
+dream-description::before {
+  font-family: Georgia, serif;
+  position: absolute;
+  font-size: 6em;
+  line-height: 1;
+  top: 0;
+  left: 0;
+  content: "here"
+}
+img {
+  width:200px;
+  height: 200px;
+}
+.fullnav {
+  display: inline-block;
+  text-align: center;
+  width: 100px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 620px){
+    .fullnav{
+      position: fixed;
+      width: 100%;
+        
+    }
+    .fullsearchbutton{
+      position:fixed;
+    }
 }
